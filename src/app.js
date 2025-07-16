@@ -3,14 +3,13 @@
 
 // const {getUserById} = require("./js-foundation/03-callbacks");
 
-
 // const id = 1
 // getUserById(id, (error, user)=>{
 //     if(error){
 //         throw new error('User not found with id: ',id)
 //     }
 //     console.log(user);
-    
+
 // })
 
 // const { getAge } = require("./plugins/get-age.plugin");
@@ -29,9 +28,11 @@
 
 // console.log(Jhon);
 
-const {getPokemonById} = require ('./js-foundation/06-promises')
+const { getPokemonById } = require("./js-foundation/06-promises");
 
-getPokemonById(4)
-.then((pokemon)=>{
-    console.log("poke:",{pokemon});
-})
+getPokemonById(1)
+  .then((pokemon) => console.log("poke:", { pokemon }))
+  .catch((err) => console.log({ err }))
+  .finally(() => console.log("Bueno esto es el final del then."));
+
+// Una funcion async es una funcion que regresa una promesa.
