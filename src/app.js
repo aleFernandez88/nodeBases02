@@ -27,12 +27,17 @@
 // const Jhon = makePerson(obj)
 
 // console.log(Jhon);
+// const { getPokemonById } = require("./js-foundation/06-promises");
 
-const { getPokemonById } = require("./js-foundation/06-promises");
-
-getPokemonById(1)
-  .then((pokemon) => console.log("poke:", { pokemon }))
-  .catch((err) => console.log({ err }))
-  .finally(() => console.log("Bueno esto es el final del then."));
+// getPokemonById(1)
+//   .then((pokemon) => console.log("poke:", { pokemon }))
+//   .catch((err) => console.log({ err }))
+//   .finally(() => console.log("Bueno esto es el final del then."));
 
 // Una funcion async es una funcion que regresa una promesa.
+
+const { buildLogger } = require("./plugins");
+
+const logger = buildLogger("app.js");
+
+logger.log("Hola Mundo.");
